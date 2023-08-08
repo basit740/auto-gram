@@ -13,4 +13,8 @@
 
 body {
 	position: relative;
+	overflow-x: hidden;
+}
+.app {
+	overflow-x: hidden;
 }

@@ -1,10 +1,16 @@
 import React from 'react';
-
-const Index = () => {
+import MobileNav from 'components/MobileNav';
+const Index = ({ onOptionSelected, onCloseBoth }) => {
+	const handleClick = (e, option) => {
+		onOptionSelected(e, option);
+	};
 	return (
-		<main className='w-full'>
-			<section className='max-w-lg mx-auto bg-green-400 min-h-screen'>
-				<h1>This is main</h1>
+		<main className='w-full' onClick={onCloseBoth}>
+			<aside className='flex items-center justify-center w-full mb-3'>
+				<MobileNav onClick={handleClick} />
+			</aside>
+			<section className='max-w-lg mx-auto min-h-screen'>
+				<h1 className='text-6xl text-center'>Autogram</h1>
 			</section>
 		</main>
 	);

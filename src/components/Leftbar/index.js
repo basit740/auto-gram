@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Index = () => {
+const Index = ({ selected }) => {
 	return (
-		<aside className='bg-fuchsia-300 absolute h-full w-48 left-0 top-0'>
-			<h1 className='text-2xl text-white'>Left Side bar</h1>
+		<aside
+			className={`bg-slate-50 shadow-md absolute h-full w-48 top-0 transition-all duration-300 p-4 ${
+				selected ? 'left-0' : '-left-48'
+			}`}
+		>
+			<h1 className='text-2xl'>Themes</h1>
 		</aside>
 	);
 };
